@@ -1,6 +1,6 @@
 import './App.css';
 
-function App() {
+function AppJSX() {
   const name = "EGGSY"
   const list = ['우유', '딸기', '바나나', '요거트']
   return (
@@ -9,9 +9,9 @@ function App() {
       <h2>Hello!</h2>
       <p>{name}</p>
       <ui>
-        {list.map((item) =>
-          (<li>{item}</li>
-        ))}
+        {list.map(function(item){
+          return <li>{item}</li>
+        })}
       </ui>
       <img
         style= {{width: '200px', height: '200px'}}
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppJSX;
