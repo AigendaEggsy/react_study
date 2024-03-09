@@ -3,14 +3,15 @@ import Counter from './components/Counter';
 import React, { useState } from 'react';
 
 export default function AppCounter() {
-  const [totalcount, setTotalcount] = useState(0);
+  const [count, setCount] = useState(0);
+  const handleClick = () => setCount((prev) => prev + 1)
   return (
     <div className='container'>
       <div className='banner'>
-        Total Count : {totalcount} {totalcount > 10 ? '🔥' : '❄️'}
+        Total Count : {count} {count > 10 ? '🔥' : '❄️'}
       </div>
-      <Counter setTotalcount={setTotalcount}/>
-      <Counter setTotalcount={setTotalcount}/>
+      <Counter total={count} onClick={handleClick}/>
+      <Counter total={count} onClick={handleClick}/>
     </div>
   );
 }
