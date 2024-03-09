@@ -2,15 +2,16 @@ import './App.css';
 
 function App() {
   const name = "EGGSY"
+  const list = ['우유', '딸기', '바나나', '요거트']
   return (
     <div>
-      <h1 className='orange'>Hello!</h1>
+      <h1 className='orange'>{`Hello! ${name}`}</h1>
       <h2>Hello!</h2>
       <p>{name}</p>
       <ui>
-        <ul>우유</ul>
-        <ul>딸기</ul>
-        <ul>바나나</ul>
+        {list.map((item) =>
+          (<li>{item}</li>
+        ))}
       </ui>
       <img
         style= {{width: '200px', height: '200px'}}
