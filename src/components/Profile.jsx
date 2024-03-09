@@ -1,6 +1,9 @@
-export default function Profile({image, name, title}){
+import React from 'react';
+
+export default function Profile({image, name, title, isNew}){
   return (
     <div className="profile">
+      {isNew && <div className="new">New</div>}
       <img
         className="photo"
         src={image}
